@@ -3,7 +3,7 @@ namespace Game.Data
     public enum Departments
     {
         None = 0,
-        HSS = 1, // 인문
+        HSS = 1, // 인문사회과학과정
         AE = 2, // 항공우주공학과
         BS = 3, // 생명과학과
         BiS = 4, // 바이오및뇌공학과

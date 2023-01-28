@@ -1,0 +1,26 @@
+[
+  {
+    "Code": 12101,
+    "Name": "미적분학 I",
+    "Description": "기초적인 미적분학에 대해 배웁니다",
+    "Credit": 0,
+    "Type": 1,
+    "Dept": 12,
+    "Skill": 0,
+    "canTake": false,
+    "Difficulty": 1,
+    "Prerequisites": null
+  },
+  {
+    "Code": 8101,
+    "Name": "프로그래밍기초",
+    "Description": "파이썬 코딩",
+    "Credit": 0,
+    "Type": 1,
+    "Dept": 8,
+    "Skill": 0,
+    "canTake": false,
+    "Difficulty": 1,
+    "Prerequisites": [12101]
+  }
+]

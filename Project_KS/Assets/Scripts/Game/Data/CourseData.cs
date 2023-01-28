@@ -31,6 +31,34 @@ namespace Game.Data
         public bool canTake;
         public int Difficulty;
         public List<CourseCode> Prerequisites;
+
+        public static CourseType GetType(string type)
+        {
+            switch (type)
+            {
+                case "기초필수":
+                    return CourseType.BasicRequired;
+                case "기초선택":
+                    return CourseType.BasicElective;
+                case "전공필수":
+                    return CourseType.MajorRequired;
+                case "전공선택":
+                    return CourseType.MajorElective;
+                case "교양필수":
+                    return CourseType.MandatoryGeneral;
+                case "인문사회선택":
+                    return CourseType.HumanitiesAndSocialElective;
+                case "공통필수":
+                    return CourseType.GeneralRequired;
+                case "선택(석/박사)":
+                    return CourseType.GraduateElective;
+                case "자유선택":
+                    return CourseType.OtherElective;
+
+                default:
+                    return CourseType.None;
+            }
+        }
     }
 
     [CreateAssetMenu(fileName = "CourseData", menuName = "Data/Course")]

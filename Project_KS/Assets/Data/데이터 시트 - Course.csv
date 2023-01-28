@@ -1,0 +1,4 @@
+<CourseCode>,<string>,<string>,<int>,<CourseType>,<Departments>,<SkillCode>,<int>,<List<CourseCode>>
+Code,Name,Description,Credit,Type,Dept,Skill,Difficulty,Prerequisites
+MAS101,미적분학 I,기초적인 미적분학에 대해 배웁니다,3,기초필수,MAS,None,1,None
+CS101,프로그래밍기초,파이썬 코딩,3,기초필수,CS,None,1,MAS101
