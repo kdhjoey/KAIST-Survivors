@@ -129,7 +129,10 @@ namespace Tools
                         break;
 
                     case "Dept":
-                        if (Enum.TryParse(dict[key], out Departments dept))
+                        var dept = Course.GetDept(dict[key]);
+                        if (dept != Departments.None)
+                            result.Dept = dept;
+                        else if (Enum.TryParse(dict[key], out dept))
                             result.Dept = dept;
                         else
                         {
@@ -213,7 +216,8 @@ namespace Tools
                         break;
 
                     case "Dept":
-                        if (!Enum.TryParse(dict[key], out Departments dept))
+                        var dept = Course.GetDept(dict[key]);
+                        if (dept == Departments.None || !Enum.TryParse(dict[key], out dept))
                         {
                             Debug.Log($"Course Department of {dict["Name"]} is not Valid : {dict[key]}");
                             isValid = false;

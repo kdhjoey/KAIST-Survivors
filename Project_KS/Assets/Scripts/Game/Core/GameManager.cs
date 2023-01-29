@@ -6,8 +6,9 @@ namespace Game
 {
     public class GameManager : MonoBehaviour
     {
-        [HideInInspector]
         public static GameManager Instance = null;
+        [SerializeField] private GameDataLoader gameDataLoader;
+        public GameData GameData;
 
         private void Awake()
         {
@@ -18,12 +19,19 @@ namespace Game
             }
             else
                 Destroy(this.gameObject);
+
+            this.GameData = gameDataLoader.GameData;
         }
 
         public void ChangeScene(SceneName scene)
         {
             Debug.Log($"Scene Change To : {scene}");
             SceneManager.LoadScene(scene.ToString());
+        }
+
+        private void Update()
+        {
+            Debug.Log(GameData.GetCourse(CourseCode.MAS101).Name);
         }
     }
 }

@@ -7,5 +7,6 @@ namespace Game.Data
     {
         None = 0,
         StartScene = 1,
+        TestScene = 2,
     }
 }

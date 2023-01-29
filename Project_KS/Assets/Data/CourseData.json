@@ -21,6 +21,6 @@
     "Skill": 0,
     "canTake": false,
     "Difficulty": 1,
-    "Prerequisites": [12101]
+    "Prerequisites": null
   }
 ]
